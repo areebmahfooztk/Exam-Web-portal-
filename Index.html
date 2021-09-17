@@ -1,0 +1,59 @@
+{% extends "mhz/base.html" %}
+{% block content %}
+<html lang="en">
+<head>
+<body>
+ <form action="{% url 'create' %}" method="post">
+     {% csrf_token %}
+<div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" name="name" placeholder="Name" class="form-control" style="..." required="required"/>
+
+     <label for="age">Age</label>
+    <input type="text" name="age" placeholder="Age" class="form-control" style="..." required="required"/>
+
+    <label for="Qualification">Qualification</label>
+    <input type="text" name="Qualification" placeholder="Qualification" class="form-control" style="..." required="required"/>
+
+    <label for="Yearofpass">Yearofpass</label>
+    <input type="text" name="Yearofpass" placeholder="Year of pass "class="form-control" style="..." required="required"/>
+
+    <label for="mobile">Mobile </label>
+    <input type="text"  name="mobile" placeholder="Mobile" class="form-control" style="..."  required="required"/>
+
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" placeholder="Email" class="form-control" style="..."  required="required"/>
+
+    <label for="password"> Create Password :</label>
+    <input type="password" name="password" placeholder="Password" id="password" class="form-control" style="..."  required="required"/>
+
+    <br>
+     <label for="post">Post</label>
+         <select id="post" name="post" >
+             <option value="Machine learning">Machine learning</option>
+             <option value="Python developer">Python Developer</option>
+             <option value="Forex trading">Forex trading</option>
+             <option value="android developer">Android developer</option>
+         </select>
+     <br>
+
+      <div>
+     <label for="Experience">Experience</label>
+          </div>
+     <input type="text" name="experience" placeholder="Experience" class="form-control" style="..." required="required"/>
+
+
+
+    <div>
+
+    <br>
+    <button type="submit" class ="btn btn-sm btn-primary"><span class="glyphicon glyphicon-plus"></span>Submit</button>
+    </div>
+    <br>
+
+</div>
+</form>
+</body>
+</head>
+</html>
+{% endblock %}
